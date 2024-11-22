@@ -1946,82 +1946,236 @@
     }
   }
 }
-
-.checkout-form {
-  width: 55%;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  h2 {
-    color: #111827;
-    margin-bottom: 16px;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110.5%;
-    text-transform: uppercase;
+.checkout {
+  padding-top: 30px;
+  padding-bottom: 80px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 50px;
   }
+  .container {
+  }
+  .check_out-title {
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 40px;
+  }
+  .wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+  .checkout-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+    h2 {
+      color: #111827;
+      margin-bottom: 16px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 110.5%;
+      text-transform: uppercase;
+    }
 
-  .form-section {
-    .same {
+    .form-section {
+      .same {
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 1024px) {
+          flex-direction: column;
+        }
+      }
+      .form-group {
+        margin-bottom: 24px;
+        position: relative;
+        .error {
+          display: none;
+          color: red;
+          position: absolute;
+          left: 3px;
+          top: 102%;
+          font-size: 14px;
+        }
+
+        input,
+        select,
+        textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #c7c7c7;
+          font-size: 16px;
+
+          &:focus {
+            border-color: #1c1c1c;
+            outline: none;
+          }
+          &::placeholder {
+            font-family: "TT Firs Neue";
+            font-size: 16px;
+          }
+        }
+
+        textarea {
+          resize: vertical;
+          min-height: 100px;
+          resize: none;
+        }
+      }
+
+      .form-row {
+        display: flex;
+        gap: 10px;
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+        .form-group {
+          flex: 1;
+          @media screen and (max-width: 768px) {
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      .checkbox {
+        display: flex;
+        align-items: center;
+        input {
+          width: auto;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .order-bill {
+    width: 40%;
+    h2 {
+      margin-bottom: 16px;
+      font-size: 20px;
+      color: #111827;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+    .product {
+      background: var(--Grey-Grey-32, #f3f4f6);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      @media screen and (max-width: 768px) {
+        padding: 24px 16px;
+        gap: 20px;
+      }
+    }
+    .title {
+    }
+    .bill-item {
       display: flex;
       justify-content: space-between;
-    }
-    .form-group {
-      margin-bottom: 24px;
-      position: relative;
-      .error {
-        display: none;
-        color: red;
-        position: absolute;
-        left: 3px;
-        top: 102%;
-        font-size: 14px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #e5e7eb;
+      @media screen and (max-width: 768px) {
+        padding-bottom: 20px;
       }
-
-      input,
-      select,
-      textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #c7c7c7;
+    }
+    .main {
+      border-bottom: 2px dotted #75808e;
+    }
+    .name {
+      font-size: 20px;
+      color: #75808e;
+      &.prod {
+        color: #75808e;
         font-size: 16px;
-
-        &:focus {
-          border-color: #1c1c1c;
-          outline: none;
-        }
-        &::placeholder {
-          font-family: "TT Firs Neue";
-          font-size: 16px;
-        }
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        max-width: 300px;
       }
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+    .price {
+      color: #111827;
+      text-align: right;
 
-      textarea {
-        resize: vertical;
-        min-height: 100px;
-        resize: none;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
       }
     }
 
-    .form-row {
-      display: flex;
-      gap: 10px;
+    .btn {
+    }
+    .privacy {
+      a {
+        text-decoration: underline;
+        color: #111827;
+      }
+    }
+  }
+}
 
-      .form-group {
-        flex: 1;
+.radio-group {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  .radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #e5e7eb;
+
+    input {
+      display: none;
+    }
+
+    .custom-radio {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000000;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 10px;
+      position: relative;
+
+      &:after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: #171717;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.2s ease-in-out;
       }
     }
 
-    .checkbox {
-      display: flex;
-      align-items: center;
+    input:checked + .custom-radio:after {
+      transform: translate(-50%, -50%) scale(1);
+    }
 
-      input {
-        width: auto;
-        margin-right: 5px;
-      }
+    &:hover .custom-radio {
+      border-color: #0056b3;
     }
   }
 }
