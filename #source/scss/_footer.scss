@@ -1,0 +1,114 @@
+.footer {
+  background: #f3f4f6;
+  .container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .top {
+    display: flex;
+    gap: 24px;
+  }
+  .logo {
+    min-width: 106px;
+    img {
+      width: 100%;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .about {
+    margin-bottom: 16px;
+  }
+  .title_16 {
+    margin-bottom: 12px;
+  }
+  .text_16 {
+  }
+  .main {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+  .site_map {
+  }
+  .site_map-list {
+    display: flex;
+    gap: 32px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  .site_map-item {
+    color: #111827;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background-color: #111827;
+      transition: transform 0.4s ease;
+    }
+    &:hover {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    gap: 24px;
+    @media screen and (max-width: 1024px) {
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 16px;
+      margin: 0;
+    }
+  }
+  .btn {
+    width: 100%;
+    max-width: 236px;
+    min-width: 236px;
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+    &.white {
+      border: 1px solid #111827;
+      &:hover {
+        background-color: #111827;
+        color: #fff;
+      }
+    }
+  }
+  .white {
+  }
+  .copy-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 32px;
+    border-top: 1px solid #e5e7eb;
+    color: #4b5563;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .right {
+  }
+  .privacy {
+    color: #4b5563;
+  }
+}
