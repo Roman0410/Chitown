@@ -103,7 +103,6 @@ $(document).ready(function () {
     const $plusBtn = $counter.find(".quantity-btn--plus");
     const $input = $counter.find(".quantity-input");
 
-    // Зменшення кількості
     $minusBtn.on("click", function () {
       let currentValue = parseInt($input.val(), 10);
       if (currentValue > 1) {
@@ -111,7 +110,6 @@ $(document).ready(function () {
       }
     });
 
-    // Збільшення кількості
     $plusBtn.on("click", function () {
       let currentValue = parseInt($input.val(), 10);
       $input.val(currentValue + 1);
@@ -121,9 +119,11 @@ $(document).ready(function () {
 
 $(".main-catalog .filter-btn").click(function () {
   $(".main-catalog .categories").toggleClass("active");
+  $("body").toggleClass("lock");
 });
 $(".main-catalog .categories .back").click(function () {
   $(".main-catalog .categories").toggleClass("active");
+  $("body").toggleClass("lock");
 });
 
 $(document).ready(function () {
