@@ -42,6 +42,9 @@
   &.scroll {
     @media screen and (min-width: 769px) {
       top: -34px;
+      .cart-wrapper {
+        top: 34px;
+      }
     }
   }
   .header-container {

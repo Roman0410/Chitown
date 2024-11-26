@@ -771,6 +771,22 @@
   .close {
     cursor: pointer;
   }
+  .empty-cart {
+    img {
+      width: 100%;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    .title_28 {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .text_14 {
+      text-align: center;
+      margin-top: 8px;
+    }
+  }
+
   .cart-list {
     height: calc(100% - 150px);
     overflow: auto;
@@ -2260,12 +2276,14 @@
   }
   .icon {
     max-width: 556px;
+    margin-right: 32px;
     img {
       width: 100%;
       height: auto;
     }
     @media screen and (max-width: 768px) {
       max-width: 271px;
+      margin: 0;
     }
   }
 }
