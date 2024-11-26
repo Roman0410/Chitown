@@ -2058,9 +2058,8 @@
         textarea {
           width: 100%;
           padding: 12px;
-          border: 1px solid #c7c7c7;
+          border: 1px solid var(--Grey-Grey-64, #75808e);
           font-size: 16px;
-
           &:focus {
             border-color: #1c1c1c;
             outline: none;
