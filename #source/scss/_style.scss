@@ -2415,3 +2415,61 @@
     }
   }
 }
+.contact {
+  padding: 40px 0;
+  .container {
+  }
+  .section_title {
+    margin-bottom: 16px;
+    text-align: left;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 28px;
+    }
+  }
+  .text_16 {
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+  .contact-list {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+    }
+  }
+  .contact-item {
+    width: 33.33%;
+    padding: 20px;
+    border: 1px solid var(--Grey-Grey-48, #e5e7eb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img {
+      margin-bottom: 20px;
+      @media screen and (max-width: 1024px) {
+        width: 48px;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+  .title_20 {
+    margin-bottom: 8px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .text_14 {
+    text-align: center;
+    cursor: pointer;
+  }
+}
